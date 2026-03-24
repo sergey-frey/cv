@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тенькаев Сергей — Frontend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAFAFA;
+    --surface: #F2F2F0;
+    --ink: #111111;
+    --ink-muted: #555555;
+    --ink-faint: #999999;
+    --accent: #0A3D62;
+    --accent-mid: #1A5C8A;
+    --accent-light: #E0EDF5;
+    --line: #DCDCDC;
+    --tag-bg: #EFEFED;
+    --tag-text: #444444;
+    --green: #1C5C3A;
+    --green-bg: #E5F2EA;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 56px 32px;
+  }
+
+  .page {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 28px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .title-line {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--accent-mid);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    text-align: right;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact-item {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+  }
+
+  .contact-item a {
+    color: var(--accent-mid);
+    text-decoration: none;
+  }
+
+  /* ── META ── */
+  .meta-row {
+    display: flex;
+    gap: 0;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+  }
+
+  .meta-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 24px;
+    margin-right: 24px;
+    border-right: 1px solid var(--line);
+  }
+
+  .meta-item:last-child {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .meta-item span {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── STATS ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+
+  .stat-card {
+    background: var(--bg);
+    padding: 18px 20px;
+  }
+
+  .stat-value {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── BODY ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0 40px;
+  }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-top: 3px;
+    border-top: 1px solid var(--line);
+    margin-top: 0;
+  }
+
+  .section-body {
+    padding-bottom: 36px;
+    border-top: 1px solid var(--line);
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* ── ABOUT ── */
+  .about-text {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--ink-muted);
+    padding-top: 4px;
+  }
+
+  .about-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ── EXP ── */
+  .exp-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .exp-item:first-child { padding-top: 4px; }
+  .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .exp-company {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .exp-period {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .exp-role-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .exp-role {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    font-style: italic;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .exp-duration {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    background: var(--surface);
+    color: var(--ink-faint);
+    padding: 2px 7px;
+    border: 1px solid var(--line);
+  }
+
+  .exp-desc {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  .achievements { margin-bottom: 14px; }
+
+  .achievement {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--surface);
+  }
+
+  .achievement:last-child { border-bottom: none; }
+
+  .achievement-arrow {
+    color: var(--accent-mid);
+    font-size: 11px;
+    padding-top: 2px;
+    flex-shrink: 0;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .achievement strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ── TAGS ── */
+  .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 12px;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 3px 9px;
+    border: 1px solid var(--line);
+  }
+
+  .tag.primary {
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: #B8D0E4;
+    font-weight: 500;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-top: 4px;
+  }
+
+  /* ── LANG ── */
+  .lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+  }
+
+  .lang-item:first-child { padding-top: 4px; }
+  .lang-item:last-child { border-bottom: none; }
+
+  .lang-name {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .lang-level {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    background: var(--surface);
+    padding: 2px 9px;
+    border: 1px solid var(--line);
+  }
+
+  @media print {
+    body { padding: 24px; }
+    .stat-row { break-inside: avoid; }
+    .exp-item { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <h1 class="name">Тенькаев Сергей</h1>
+      <div class="title-line">Frontend Developer &nbsp;·&nbsp; React &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; Next.js</div>
+    </div>
+    <div class="header-right">
+      <div class="contact-item"><a href="mailto:sergey.frey.work@gmail.com">sergey.frey.work@gmail.com</a></div>
+      <div class="contact-item"><a href="tel:+79523606170">+7 (952) 360-61-70</a></div>
+      <div class="contact-item">Алматы &nbsp;·&nbsp; Удалённо</div>
+      <div class="contact-item" style="color:#999; font-size:11.5px;">Гражданство: Россия</div>
+    </div>
+  </header>
+
+  <!-- META -->
+  <div class="meta-row">
+    <div class="meta-item">Опыт <span>4+ лет</span></div>
+    <div class="meta-item">Возраст <span>22 года</span></div>
+    <div class="meta-item">Занятость <span>Полная / Проектная</span></div>
+    <div class="meta-item">Формат <span>Удалённо</span></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-value">4+</div>
+      <div class="stat-label">Лет опыта</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Компании</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">Web3</div>
+      <div class="stat-label">Последний домен</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-grid">
+
+    <!-- ABOUT -->
+    <div class="section-label" style="padding-top: 16px;">О себе</div>
+    <div class="section-body" style="padding-top: 16px; padding-bottom: 32px;">
+      <p class="about-text">
+        Frontend-разработчик с <strong>4+ годами коммерческого опыта</strong>. Быстро декомпозирую бизнес-требования на конкретные задачи разработки. Взвешенно выбираю технологии и архитектурные подходы. Всегда готов обосновать принятые решения и открыт к обратной связи.
+      </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section-label" style="padding-top: 16px;">Опыт работы</div>
+    <div class="section-body" style="padding-top: 16px; padding-bottom: 32px;">
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">Moni Labs</span>
+          <span class="exp-period">Июнь 2025 — настоящее время</span>
+        </div>
+        <div class="exp-role-line">
+          <span class="exp-role">Frontend-разработчик</span>
+          <span class="exp-duration">10 мес.</span>
+        </div>
+        <p class="exp-desc">Web3 AI-экосистема для трейдинга и анализа крипторынка. Алматы.</p>
+        <div class="achievements">
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Разработал торговый терминал с нуля в команде из двух разработчиков</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Внедрил AI-assisted workflow: агентные инструменты для рефакторинга и первичного code review</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Завершил интеграцию браузерного расширения в <strong>2 популярные платформы</strong></span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Расширил кроссбраузерную поддержку расширения; внедрил новые подходы к отладке</span>
+          </div>
+        </div>
+        <div class="stack-tags">
+          <span class="tag primary">React</span>
+          <span class="tag primary">Next.js</span>
+          <span class="tag primary">TypeScript</span>
+          <span class="tag">MobX</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Radix UI</span>
+          <span class="tag">shadcn</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Webpack</span>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">Гетшоптв</span>
+          <span class="exp-period">Ноябрь 2023 — Май 2025</span>
+        </div>
+        <div class="exp-role-line">
+          <span class="exp-role">Frontend Developer</span>
+          <span class="exp-duration">1 год 7 мес.</span>
+        </div>
+        <p class="exp-desc">AdTech-компания, рекламные решения для web, mobile и Smart TV. Москва.</p>
+        <div class="achievements">
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Автоматизировал генерацию продукта: <strong>4 ч. разработчика / день → 20 мин. менеджера</strong></span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Модуль статистики интерактивной рекламы: потери данных снижены в <strong>4 раза</strong></span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Автоматизация корпоративного портала: <strong>3 ч. → 10 мин. в неделю</strong></span>
+          </div>
+        </div>
+        <div class="stack-tags">
+          <span class="tag primary">React</span>
+          <span class="tag primary">TypeScript</span>
+          <span class="tag">Preact</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Redux Toolkit</span>
+          <span class="tag">Tanstack Query</span>
+          <span class="tag">Zustand</span>
+          <span class="tag">MUI</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">SCSS</span>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">DataArmor</span>
+          <span class="exp-period">Октябрь 2021 — Сентябрь 2023</span>
+        </div>
+        <div class="exp-role-line">
+          <span class="exp-role">Frontend Developer</span>
+          <span class="exp-duration">2 года</span>
+        </div>
+        <p class="exp-desc">Аутсорс-компания, разработка ПО на заказ и ИТ-консалтинг. Казань.</p>
+        <div class="achievements">
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>CRM для управления клиентским потоком: пропускная способность отдела выросла на <strong>20%</strong></span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Обнаружил и устранил несколько XSS-уязвимостей на корпоративном портале</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Личный кабинет клиента «с нуля» в команде 3 фронтендеров — экономия <strong>7 ч. в неделю</strong></span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-arrow">→</span>
+            <span>Нанял и онбордил 2 сотрудников</span>
+          </div>
+        </div>
+        <div class="stack-tags">
+          <span class="tag primary">React</span>
+          <span class="tag primary">TypeScript</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Astro</span>
+          <span class="tag">Redux Toolkit</span>
+          <span class="tag">Zustand</span>
+          <span class="tag">SCSS</span>
+          <span class="tag">Less</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section-label" style="padding-top: 16px;">Навыки</div>
+    <div class="section-body" style="padding-top: 16px; padding-bottom: 32px;">
+      <div class="skills-grid">
+        <span class="tag primary">JavaScript</span>
+        <span class="tag primary">TypeScript</span>
+        <span class="tag primary">React</span>
+        <span class="tag primary">Next.js</span>
+        <span class="tag">Redux</span>
+        <span class="tag">MobX</span>
+        <span class="tag">Zustand</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">SCSS</span>
+        <span class="tag">Tailwind</span>
+        <span class="tag">Webpack</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Git</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Jest</span>
+        <span class="tag">SSR</span>
+        <span class="tag">SPA</span>
+        <span class="tag">ООП</span>
+        <span class="tag">ES6+</span>
+        <span class="tag">Адаптивная вёрстка</span>
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="section-label" style="padding-top: 16px;">Языки</div>
+    <div class="section-body" style="padding-top: 16px; padding-bottom: 0;">
+      <div class="lang-item">
+        <span class="lang-name">Русский</span>
+        <span class="lang-level">Родной</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Английский</span>
+        <span class="lang-level">B1 — Средний</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
