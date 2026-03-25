@@ -11,7 +11,7 @@ const { text, highlight } = Astro.props;
 
 <span
   class={cn(
-    "jb-mono text-[11px] font-medium rounded-sm px-[9px] py-[4px]",
+    "jb-mono text-[11px] font-medium rounded-sm px-[9px] py-[4px] max-[640px]:text-[10px] max-[640px]:px-[8px] max-[640px]:py-[3px]",
     "bg-surface text-ink-mid border border-line",
     highlight && " bg-blue-bg text-blue border-blue-bd",
   )}

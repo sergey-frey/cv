@@ -36,6 +36,19 @@
         font-size: 15px;
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        overflow-x: hidden;
+    }
+
+    a {
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 640px) {
+        body {
+            font-size: 14px;
+            line-height: 1.6;
+        }
     }
 
     @keyframes blink {

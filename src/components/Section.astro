@@ -6,10 +6,10 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="mb-[32px]">
-  <div class="flex items-center gap-[10px] mb-[14px]">
+<div class="mb-[32px] max-[640px]:mb-6">
+  <div class="flex items-center gap-[10px] mb-[14px] max-[480px]:gap-[8px] max-[480px]:mb-3">
     <span
-      class="text-[10.5px] font-bold tracking-[1.5px] uppercase text-ink-faint whitespace-nowrap"
+      class="text-[10.5px] font-bold tracking-[1.5px] uppercase text-ink-faint whitespace-nowrap max-[480px]:text-[10px] max-[480px]:tracking-[1.2px]"
     >
       {title}
     </span>

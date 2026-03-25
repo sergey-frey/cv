@@ -13,17 +13,17 @@ const { company, companyLink, period, role, dur } = Astro.props;
 ---
 
 <div
-  class="bg-white border border-line rounded-md mb-[10px] transition-shadow duration-150 hover:shadow-[0_4px_18px_rgba(0,0,0,0.07)] px-[20px] pt-[20px] pb-[16px] max-[480px]:px-[14px] max-[480px]:pt-[16px] max-[480px]:pb-[12px]"
+  class="bg-white border border-line rounded-md mb-[10px] transition-shadow duration-150 hover:shadow-[0_4px_18px_rgba(0,0,0,0.07)] px-[20px] pt-[20px] pb-[16px] max-[640px]:px-4 max-[640px]:pt-4 max-[640px]:pb-3"
 >
   <div
-    class="flex items-center gap-[10px] mb-[4px] flex-wrap max-[480px]:flex-col max-[480px]:gap-[4px]"
+    class="flex items-center gap-[10px] mb-[4px] flex-wrap max-[640px]:items-start max-[640px]:gap-[6px]"
   >
     <span class="text-[16px] font-bold text-ink">{company}</span>
     <a
       href={companyLink}
       target="_blank"
       rel="noopener noreferrer"
-      class="text-[14px] text-blue underline"
+      class="text-[14px] text-blue underline break-all max-[640px]:text-[13px]"
     >
       {companyLink}
     </a>
@@ -32,15 +32,18 @@ const { company, companyLink, period, role, dur } = Astro.props;
         "text-[10.5px] rounded-[6px] px-2 py-[3px] whitespace-nowrap shrink-0",
         "text-ink-faint bg-surface border border-line",
         "ml-auto",
-        "max-[480px]:self-start",
+        "max-[640px]:ml-0",
+        "max-[640px]:self-start",
       )}
     >
       {period}
     </span>
   </div>
 
-  <div class="flex items-center gap-[8px] mb-[12px] flex-wrap">
-    <span class="text-[13px] text-ink-soft italic">{role}</span>
+  <div class="flex items-center gap-[8px] mb-[12px] flex-wrap max-[640px]:mb-[10px]">
+    <span class="text-[13px] text-ink-soft italic max-[640px]:text-[12px]">
+      {role}
+    </span>
     <span
       class="text-[11px] font-semibold text-accent bg-accent-bg border border-accent-bd rounded-full px-[9px] py-[2px]"
     >
@@ -48,15 +51,15 @@ const { company, companyLink, period, role, dur } = Astro.props;
     </span>
   </div>
 
-  <p class="text-[13px] text-ink-soft italic leading-[1.55] mb-[12px]">
+  <p class="text-[13px] text-ink-soft italic leading-[1.55] mb-[12px] max-[640px]:text-[12px]">
     <slot name="description" />
   </p>
 
-  <div class="mb-[12px]">
+  <div class="mb-[12px] max-[640px]:mb-[10px]">
     <slot name="achievements" />
   </div>
 
-  <div class="flex flex-wrap gap-[6px] mt-[2px]">
+  <div class="flex flex-wrap gap-[6px] mt-[2px] max-[640px]:gap-[5px]">
     <slot name="tags" />
   </div>
 </div>
