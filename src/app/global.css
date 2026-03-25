@@ -1,0 +1,56 @@
+@import url('@fontsource-variable/plus-jakarta-sans/wght.css');
+@import url('@fontsource-variable/jetbrains-mono/wght.css');
+@import "tailwindcss";
+
+@theme {
+    --color-bg: #fdfcf9;
+    --color-surface: #f5f2ec;
+    --color-surface2: #ede8df;
+    --color-ink: #1c1a17;
+    --color-ink-mid: #4a4640;
+    --color-ink-soft: #7a7570;
+    --color-ink-faint: #aba69f;
+    --color-accent: #d4622a;
+    --color-accent-bg: #fdf0ea;
+    --color-accent-bd: #f5c9b0;
+    --color-blue: #2563a8;
+    --color-blue-bg: #eef4fb;
+    --color-blue-bd: #baced9;
+    --color-green: #1e7b4b;
+    --color-green-bg: #e8f5ee;
+    --color-line: #e5e0d8;
+
+    --radius-md: 14px;
+    --radius-sm: 8px;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--color-bg);
+        color: var(--color-ink);
+        font-family: 'Plus Jakarta Sans Variable', sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+    }
+}
+
+@utility jb-mono {
+    font-family: 'JetBrains Mono Variable', monospace;
+}

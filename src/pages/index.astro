@@ -1,0 +1,226 @@
+---
+import "../app/global.css";
+import ProfileHeader from "../components/ProfileHeader.astro";
+import StatsGrid from "../components/StatsGrid.astro";
+import Section from "../components/Section.astro";
+import AchievementItem from "../components/AchievementItem.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+import Tag from "../components/Tag.astro";
+import LanguageRow from "../components/LanguageRow.astro";
+
+const stats = [
+  { value: "4+", label: "Лет опыта" },
+  { value: "3", label: "Компании" },
+  { value: "Web3", label: "Домен" },
+];
+
+const moniTags = [
+  { text: "React", highlight: true },
+  { text: "Next.js", highlight: true },
+  { text: "TypeScript", highlight: true },
+  { text: "MobX", highlight: false },
+  { text: "Tailwind", highlight: false },
+  { text: "Radix UI", highlight: false },
+  { text: "shadcn", highlight: false },
+  { text: "Vite", highlight: false },
+  { text: "Webpack", highlight: false },
+  { text: "Claude Code", highlight: false },
+  { text: "Codex", highlight: false },
+  { text: "Cursor", highlight: false },
+];
+
+const shopTags = [
+  { text: "React", highlight: true },
+  { text: "TypeScript", highlight: true },
+  { text: "Preact", highlight: false },
+  { text: "Next.js", highlight: false },
+  { text: "Redux Toolkit", highlight: false },
+  { text: "Tanstack Query", highlight: false },
+  { text: "Zustand", highlight: false },
+  { text: "MUI", highlight: false },
+  { text: "Tailwind", highlight: false },
+  { text: "SCSS", highlight: false },
+];
+
+const armorTags = [
+  { text: "React", highlight: true },
+  { text: "TypeScript", highlight: true },
+  { text: "Next.js", highlight: false },
+  { text: "Astro", highlight: false },
+  { text: "Redux Toolkit", highlight: false },
+  { text: "Zustand", highlight: false },
+  { text: "SCSS", highlight: false },
+  { text: "Less", highlight: false },
+];
+
+const skillsTags = [
+  { text: "JavaScript", highlight: true },
+  { text: "TypeScript", highlight: true },
+  { text: "React", highlight: true },
+  { text: "Next.js", highlight: true },
+  { text: "Redux", highlight: false },
+  { text: "MobX", highlight: false },
+  { text: "Zustand", highlight: false },
+  { text: "HTML5", highlight: false },
+  { text: "CSS3", highlight: false },
+  { text: "SCSS", highlight: false },
+  { text: "Tailwind", highlight: false },
+  { text: "Webpack", highlight: false },
+  { text: "Vite", highlight: false },
+  { text: "Git", highlight: false },
+  { text: "REST API", highlight: false },
+  { text: "Node.js", highlight: false },
+  { text: "Figma", highlight: false },
+  { text: "Jest", highlight: false },
+  { text: "SSR", highlight: false },
+  { text: "SPA", highlight: false },
+  { text: "ООП", highlight: false },
+  { text: "ES6+", highlight: false },
+  { text: "Адаптивная вёрстка", highlight: false },
+];
+---
+
+<head>
+  <title>Тенькаев Сергей — Frontend Developer</title>
+  <meta charset="utf-8" />
+</head>
+
+<div
+  class="max-w-[780px] mx-auto pt-10 px-6 pb-16 max-[480px]:pt-5 max-[480px]:px-[14px] max-[480px]:pb-12"
+>
+  <ProfileHeader />
+
+  <StatsGrid stats={stats} />
+
+  <Section title="О себе">
+    <div
+      class="bg-accent-bg border border-accent-bd rounded-md p-[18px_20px] leading-[1.75] text-ink-mid [&_strong]:text-ink [&_strong]:font-semibold max-[480px]:p-[14px_16px] max-[480px]:text-[14px]"
+    >
+      Frontend-разработчик с <strong>4+ годами коммерческого опыта</strong>.
+      Быстро декомпозирую бизнес-требования на конкретные задачи разработки.
+      Взвешенно выбираю технологии и архитектурные подходы. Всегда готов
+      обосновать принятые решения и открыт к обратной связи.
+    </div>
+  </Section>
+
+  <Section title="Опыт работы">
+    <ExperienceCard
+      company="Moni Labs"
+      companyLink="https://getmoni.io/"
+      period="Июнь 2025 — н.в."
+      role="Frontend-разработчик"
+      dur="10 мес."
+    >
+      <span slot="description">
+        Web3 AI-экосистема для трейдинга и анализа крипторынка. Алматы.
+      </span>
+
+      <AchievementItem slot="achievements">
+        Разработал торговый терминал с нуля в команде из двух разработчиков
+      </AchievementItem>
+
+      <AchievementItem slot="achievements">
+        Внедрил AI-assisted workflow: агентные инструменты для рефакторинга и
+        первичного code review
+      </AchievementItem>
+
+      <AchievementItem slot="achievements">
+        Завершил интеграцию браузерного расширения в <strong
+          >2 популярные платформы</strong
+        >
+      </AchievementItem>
+
+      <AchievementItem slot="achievements">
+        Расширил кроссбраузерную поддержку; внедрил новые подходы к отладке
+      </AchievementItem>
+
+      {
+        moniTags.map((t) => (
+          <Tag slot="tags" text={t.text} highlight={t.highlight} />
+        ))
+      }
+    </ExperienceCard>
+
+    <ExperienceCard
+      company="getads"
+      companyLink="https://getads.ru/"
+      period="Нояб. 2023 — Май 2025"
+      role="Frontend Developer"
+      dur="1 г. 7 мес."
+    >
+      <span slot="description">
+        AdTech-компания, рекламные решения для web, mobile и Smart TV. Москва.
+      </span>
+
+      <AchievementItem slot="achievements">
+        Автоматизировал генерацию продукта: <strong
+          >4 ч. разработчика / день → 20 мин. менеджера</strong
+        >
+      </AchievementItem>
+      <AchievementItem slot="achievements">
+        Модуль статистики: потери данных снижены в <strong>4 раза</strong>
+      </AchievementItem>
+      <AchievementItem slot="achievements">
+        Автоматизация корпоративного портала: <strong
+          >3 ч. → 10 мин. в неделю</strong
+        >
+      </AchievementItem>
+
+      {
+        shopTags.map((t) => (
+          <Tag slot="tags" text={t.text} highlight={t.highlight} />
+        ))
+      }
+    </ExperienceCard>
+
+    <ExperienceCard
+      company="DataArmor"
+      companyLink="https://www.dataarmor.ru/"
+      period="Окт. 2021 — Сент. 2023"
+      role="Frontend Developer"
+      dur="2 года"
+    >
+      <span slot="description">
+        Аутсорс-компания, разработка ПО на заказ и ИТ-консалтинг. Казань.
+      </span>
+
+      <AchievementItem slot="achievements">
+        CRM для управления клиентским потоком: пропускная способность выросла на <strong
+          >20%</strong
+        >
+      </AchievementItem>
+      <AchievementItem slot="achievements">
+        Обнаружил и устранил несколько XSS-уязвимостей на корпоративном портале
+      </AchievementItem>
+      <AchievementItem slot="achievements">
+        Личный кабинет «с нуля» в команде 3 фронтендеров — экономия <strong
+          >7 ч. в неделю</strong
+        >
+      </AchievementItem>
+      <AchievementItem slot="achievements">
+        Нанял и онбордил 2 сотрудников
+      </AchievementItem>
+
+      {
+        armorTags.map((t) => (
+          <Tag slot="tags" text={t.text} highlight={t.highlight} />
+        ))
+      }
+    </ExperienceCard>
+  </Section>
+
+  <Section title="Навыки">
+    <div
+      class="bg-surface border border-line rounded-md p-[16px_18px] flex flex-wrap gap-[7px]"
+    >
+      {skillsTags.map((t) => <Tag text={t.text} highlight={t.highlight} />)}
+    </div>
+  </Section>
+
+  <Section title="Языки">
+    <div class="flex flex-col gap-[8px]">
+      <LanguageRow name="Русский" level="Родной" />
+      <LanguageRow name="Английский" level="B1 — Средний" />
+    </div>
+  </Section>
+</div>

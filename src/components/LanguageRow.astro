@@ -1,0 +1,24 @@
+---
+import { cn } from "../shared/utils/cn";
+
+interface Props {
+  name: string;
+  level: string;
+}
+
+const { name, level } = Astro.props;
+---
+
+<div
+  class={cn(
+    "flex items-center justify-between bg-white border border-line rounded-sm py-3 px-4",
+  )}
+>
+  <span class="font-semibold text-[14px]">{name}</span>
+
+  <span
+    class="text-[11px] text-ink-soft bg-surface border border-line rounded-sm px-[9px] py-[3px]"
+  >
+    {level}
+  </span>
+</div>
