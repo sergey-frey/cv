@@ -4,16 +4,17 @@ import tailwindcss from "@tailwindcss/vite";
 
 const getBase = () => {
   if (process.env.NODE_ENV === "development") {
-    return "/cv/";
+    return "/cv";
   }
 
-  return "/";
+  return undefined;
 };
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://sergey-frey.github.io/",
+  base: getBase(),
   vite: {
-    base: getBase(),
     plugins: [tailwindcss()],
   },
 });
