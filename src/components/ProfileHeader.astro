@@ -1,13 +1,18 @@
 ---
-const avatarText = "СТ";
-const name = "Тенькаев Сергей";
-const badgeText = "Открыт к офферам";
-const roleStrong = "Frontend Developer";
-const roleTail = "React, TypeScript, Next.js · 4+ года опыта";
+import type { Content } from "../i18n";
 
-const email = "sergey.frey.work@gmail.com";
-const telegram = "@sergeyfrey";
-const location = "Алматы · Удалённо";
+interface Props {
+  profile: Content["profile"];
+}
+
+const {
+  avatarText,
+  name,
+  badgeText,
+  roleStrong,
+  roleTail,
+  contacts: { email, telegram, location, emailAriaLabel, telegramAriaLabel },
+} = Astro.props.profile;
 ---
 
 <header class="mb-[28px] max-[640px]:mb-6">
@@ -43,7 +48,7 @@ const location = "Алматы · Удалённо";
       href={`mailto:${email}`}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Email"
+      aria-label={emailAriaLabel}
     >
       <svg
         viewBox="0 0 16 16"
@@ -63,7 +68,7 @@ const location = "Алматы · Удалённо";
       href="https://t.me/sergeyfrey"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Telegram"
+      aria-label={telegramAriaLabel}
     >
       <svg
         viewBox="0 0 16 16"

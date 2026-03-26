@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Тенькаев Сергей — Frontend Developer"
+  },
+  "profile": {
+    "avatarText": "СТ",
+    "name": "Тенькаев Сергей",
+    "badgeText": "Открыт к офферам",
+    "roleStrong": "Frontend Developer",
+    "roleTail": "React, TypeScript, Next.js · 4+ года опыта",
+    "contacts": {
+      "email": "sergey.frey.work@gmail.com",
+      "telegram": "@sergeyfrey",
+      "location": "Алматы · Удалённо",
+      "emailAriaLabel": "Email",
+      "telegramAriaLabel": "Telegram"
+    }
+  },
+  "stats": [
+    { "value": "4+", "label": "Лет опыта" },
+    { "value": "3", "label": "Компании" },
+    { "value": "Web3", "label": "Домен" }
+  ],
+  "sections": {
+    "about": {
+      "title": "О себе",
+      "textHtml": "Frontend-разработчик с <strong>4+ годами коммерческого опыта</strong>. Быстро декомпозирую бизнес-требования на конкретные задачи разработки. Взвешенно выбираю технологии и архитектурные подходы. Всегда готов обосновать принятые решения и открыт к обратной связи."
+    },
+    "experience": {
+      "title": "Опыт работы"
+    },
+    "skills": {
+      "title": "Навыки"
+    },
+    "languages": {
+      "title": "Языки"
+    }
+  },
+  "experience": {
+    "moniLabs": {
+      "period": "Июнь 2025 — н.в.",
+      "role": "Frontend-разработчик",
+      "duration": "10 мес.",
+      "description": "Web3 AI-экосистема для трейдинга и анализа крипторынка. Алматы.",
+      "achievements": [
+        "Разработал торговый терминал с нуля в команде из двух разработчиков",
+        "Внедрил AI-assisted workflow: агентные инструменты для рефакторинга и первичного code review",
+        "Завершил интеграцию браузерного расширения в <strong>2 популярные платформы</strong>",
+        "Расширил кроссбраузерную поддержку; внедрил новые подходы к отладке"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "Next.js", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "MobX", "highlight": false },
+        { "text": "Tailwind", "highlight": false },
+        { "text": "Radix UI", "highlight": false },
+        { "text": "shadcn", "highlight": false },
+        { "text": "Vite", "highlight": false },
+        { "text": "Webpack", "highlight": false },
+        { "text": "Claude Code", "highlight": false },
+        { "text": "Codex", "highlight": false },
+        { "text": "Cursor", "highlight": false }
+      ]
+    },
+    "getads": {
+      "period": "Нояб. 2023 — Май 2025",
+      "role": "Frontend Developer",
+      "duration": "1 г. 7 мес.",
+      "description": "AdTech-компания, рекламные решения для web, mobile и Smart TV. Москва.",
+      "achievements": [
+        "Автоматизировал генерацию продукта: <strong>4 ч. разработчика / день → 20 мин. менеджера</strong>",
+        "Модуль статистики: потери данных снижены в <strong>4 раза</strong>",
+        "Автоматизация корпоративного портала: <strong>3 ч. → 10 мин. в неделю</strong>"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "Preact", "highlight": false },
+        { "text": "Next.js", "highlight": false },
+        { "text": "Redux Toolkit", "highlight": false },
+        { "text": "Tanstack Query", "highlight": false },
+        { "text": "Zustand", "highlight": false },
+        { "text": "MUI", "highlight": false },
+        { "text": "Tailwind", "highlight": false },
+        { "text": "SCSS", "highlight": false }
+      ]
+    },
+    "dataArmor": {
+      "period": "Окт. 2021 — Сент. 2023",
+      "role": "Frontend Developer",
+      "duration": "2 года",
+      "description": "Аутсорс-компания, разработка ПО на заказ и ИТ-консалтинг. Казань.",
+      "achievements": [
+        "CRM для управления клиентским потоком: пропускная способность выросла на <strong>20%</strong>",
+        "Обнаружил и устранил несколько XSS-уязвимостей на корпоративном портале",
+        "Личный кабинет «с нуля» в команде 3 фронтендеров — экономия <strong>7 ч. в неделю</strong>",
+        "Нанял и онбордил 2 сотрудников"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "Next.js", "highlight": false },
+        { "text": "Astro", "highlight": false },
+        { "text": "Redux Toolkit", "highlight": false },
+        { "text": "Zustand", "highlight": false },
+        { "text": "SCSS", "highlight": false },
+        { "text": "Less", "highlight": false }
+      ]
+    }
+  },
+  "skillsTags": [
+    { "text": "JavaScript", "highlight": true },
+    { "text": "TypeScript", "highlight": true },
+    { "text": "React", "highlight": true },
+    { "text": "Next.js", "highlight": true },
+    { "text": "Redux", "highlight": false },
+    { "text": "MobX", "highlight": false },
+    { "text": "Zustand", "highlight": false },
+    { "text": "HTML5", "highlight": false },
+    { "text": "CSS3", "highlight": false },
+    { "text": "SCSS", "highlight": false },
+    { "text": "Tailwind", "highlight": false },
+    { "text": "Webpack", "highlight": false },
+    { "text": "Vite", "highlight": false },
+    { "text": "Git", "highlight": false },
+    { "text": "REST API", "highlight": false },
+    { "text": "Node.js", "highlight": false },
+    { "text": "Figma", "highlight": false },
+    { "text": "Jest", "highlight": false },
+    { "text": "SSR", "highlight": false },
+    { "text": "SPA", "highlight": false },
+    { "text": "ООП", "highlight": false },
+    { "text": "ES6+", "highlight": false },
+    { "text": "Адаптивная вёрстка", "highlight": false }
+  ],
+  "languages": [
+    { "name": "Русский", "level": "Родной" },
+    { "name": "Английский", "level": "B1 — Средний" }
+  ]
+}

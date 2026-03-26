@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Sergey Tenkaev — Frontend Developer"
+  },
+  "profile": {
+    "avatarText": "ST",
+    "name": "Sergey Tenkaev",
+    "badgeText": "Open to offers",
+    "roleStrong": "Frontend Developer",
+    "roleTail": "React, TypeScript, Next.js · 4+ years of experience",
+    "contacts": {
+      "email": "sergey.frey.work@gmail.com",
+      "telegram": "@sergeyfrey",
+      "location": "Almaty · Remote",
+      "emailAriaLabel": "Email",
+      "telegramAriaLabel": "Telegram"
+    }
+  },
+  "stats": [
+    { "value": "4+", "label": "Years of exp." },
+    { "value": "3", "label": "Companies" },
+    { "value": "Web3", "label": "Domain" }
+  ],
+  "sections": {
+    "about": {
+      "title": "About",
+      "textHtml": "Frontend developer with <strong>4+ years of commercial experience</strong>. Quickly decompose business requirements into specific development tasks. Thoughtfully choose technologies and architectural approaches. Always ready to justify decisions made and open to feedback."
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "languages": {
+      "title": "Languages"
+    }
+  },
+  "experience": {
+    "moniLabs": {
+      "period": "June 2025 — present",
+      "role": "Frontend Developer",
+      "duration": "10 mo.",
+      "description": "Web3 AI ecosystem for crypto trading and market analysis. Almaty.",
+      "achievements": [
+        "Built a trading terminal from scratch as part of a two-developer team",
+        "Implemented AI-assisted workflow: agentic tools for refactoring and initial code review",
+        "Completed browser extension integration into <strong>2 popular platforms</strong>",
+        "Extended cross-browser support; introduced new debugging approaches"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "Next.js", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "MobX", "highlight": false },
+        { "text": "Tailwind", "highlight": false },
+        { "text": "Radix UI", "highlight": false },
+        { "text": "shadcn", "highlight": false },
+        { "text": "Vite", "highlight": false },
+        { "text": "Webpack", "highlight": false },
+        { "text": "Claude Code", "highlight": false },
+        { "text": "Codex", "highlight": false },
+        { "text": "Cursor", "highlight": false }
+      ]
+    },
+    "getads": {
+      "period": "Nov. 2023 — May 2025",
+      "role": "Frontend Developer",
+      "duration": "1 yr. 7 mo.",
+      "description": "AdTech company, advertising solutions for web, mobile, and Smart TV. Moscow.",
+      "achievements": [
+        "Automated product generation: <strong>4 hrs dev/day → 20 min manager</strong>",
+        "Statistics module: data loss reduced by <strong>4×</strong>",
+        "Corporate portal automation: <strong>3 hrs → 10 min per week</strong>"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "Preact", "highlight": false },
+        { "text": "Next.js", "highlight": false },
+        { "text": "Redux Toolkit", "highlight": false },
+        { "text": "Tanstack Query", "highlight": false },
+        { "text": "Zustand", "highlight": false },
+        { "text": "MUI", "highlight": false },
+        { "text": "Tailwind", "highlight": false },
+        { "text": "SCSS", "highlight": false }
+      ]
+    },
+    "dataArmor": {
+      "period": "Oct. 2021 — Sep. 2023",
+      "role": "Frontend Developer",
+      "duration": "2 years",
+      "description": "Outsourcing company, custom software development and IT consulting. Kazan.",
+      "achievements": [
+        "CRM for client flow management: throughput increased by <strong>20%</strong>",
+        "Discovered and fixed several XSS vulnerabilities on the corporate portal",
+        "Personal account from scratch with a team of 3 frontends — saving <strong>7 hrs/week</strong>",
+        "Hired and onboarded 2 employees"
+      ],
+      "tags": [
+        { "text": "React", "highlight": true },
+        { "text": "TypeScript", "highlight": true },
+        { "text": "Next.js", "highlight": false },
+        { "text": "Astro", "highlight": false },
+        { "text": "Redux Toolkit", "highlight": false },
+        { "text": "Zustand", "highlight": false },
+        { "text": "SCSS", "highlight": false },
+        { "text": "Less", "highlight": false }
+      ]
+    }
+  },
+  "skillsTags": [
+    { "text": "JavaScript", "highlight": true },
+    { "text": "TypeScript", "highlight": true },
+    { "text": "React", "highlight": true },
+    { "text": "Next.js", "highlight": true },
+    { "text": "Redux", "highlight": false },
+    { "text": "MobX", "highlight": false },
+    { "text": "Zustand", "highlight": false },
+    { "text": "HTML5", "highlight": false },
+    { "text": "CSS3", "highlight": false },
+    { "text": "SCSS", "highlight": false },
+    { "text": "Tailwind", "highlight": false },
+    { "text": "Webpack", "highlight": false },
+    { "text": "Vite", "highlight": false },
+    { "text": "Git", "highlight": false },
+    { "text": "REST API", "highlight": false },
+    { "text": "Node.js", "highlight": false },
+    { "text": "Figma", "highlight": false },
+    { "text": "Jest", "highlight": false },
+    { "text": "SSR", "highlight": false },
+    { "text": "SPA", "highlight": false },
+    { "text": "OOP", "highlight": false },
+    { "text": "ES6+", "highlight": false },
+    { "text": "Responsive Design", "highlight": false }
+  ],
+  "languages": [
+    { "name": "Russian", "level": "Native" },
+    { "name": "English", "level": "B1 — Intermediate" }
+  ]
+}

@@ -1,0 +1,32 @@
+---
+import { langs } from "../i18n";
+
+interface Props {
+  currentLang: string;
+}
+
+const { currentLang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<div class="flex items-center gap-[6px]">
+  {
+    langs.map((lang) => {
+      const isActive = lang === currentLang;
+      return (
+        <a
+          href={`${base}/${lang}/`}
+          class:list={[
+            "text-[11px] font-bold tracking-[1px] uppercase px-[9px] py-[4px] rounded-sm border transition-colors duration-[0.12s]",
+            isActive
+              ? "bg-ink text-surface border-ink cursor-default pointer-events-none"
+              : "bg-surface text-ink-faint border-line hover:border-ink-faint hover:text-ink-mid",
+          ]}
+          aria-current={isActive ? "page" : undefined}
+        >
+          {lang}
+        </a>
+      );
+    })
+  }
+</div>
