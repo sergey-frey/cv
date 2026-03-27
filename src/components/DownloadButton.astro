@@ -16,7 +16,7 @@ const { href } = Astro.props;
     "cursor-pointer transition-colors duration-120",
     "text-surface bg-accent",
     "hover:bg-ink",
-    "no-print",
+    "no-print download-button",
   )}
   href={href}
   target="_blank"
@@ -31,3 +31,11 @@ const { href } = Astro.props;
     <slot />
   </span>
 </a>
+
+<style>
+  @media (hover: none) {
+    .download-button:hover {
+      background-color: var(--color-accent);
+    }
+  }
+</style>

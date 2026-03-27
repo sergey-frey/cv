@@ -16,7 +16,10 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params as { lang: Lang };
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const content = getContent(lang);
+
+const pdfUrl = base + content.meta.pdfUrl;
 ---
 
 <html lang={lang}>
@@ -34,7 +37,9 @@ const content = getContent(lang);
       </div>
 
       <ProfileHeader profile={content.profile}>
-        <DownloadButton href={content.meta.pdfUrl}>{content.common.downloadPdf}</DownloadButton>
+        <DownloadButton href={pdfUrl}
+          >{content.common.downloadPdf}</DownloadButton
+        >
       </ProfileHeader>
 
       <StatsGrid stats={content.stats} />
