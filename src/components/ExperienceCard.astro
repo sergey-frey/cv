@@ -13,11 +13,12 @@ const { company, companyLink, period, role, dur } = Astro.props;
 ---
 
 <div
-  class="bg-white border border-line rounded-md mb-[10px] transition-shadow duration-150 hover:shadow-[0_4px_18px_rgba(0,0,0,0.07)] px-[20px] pt-[20px] pb-[16px] max-[640px]:px-4 max-[640px]:pt-4 max-[640px]:pb-3"
+  class={cn(
+    "bg-white border border-line rounded-md mb-2.5 px-5 pt-5 pb-4",
+    "max-[640px]:px-4 max-[640px]:pt-4 max-[640px]:pb-3",
+  )}
 >
-  <div
-    class="flex items-center gap-[10px] mb-[4px] flex-wrap max-[640px]:items-start max-[640px]:gap-[6px]"
-  >
+  <div class="flex items-center gap-2.5 mb-1 flex-wrap max-[640px]:gap-1.5">
     <span class="text-[16px] font-bold text-ink">{company}</span>
     <a
       href={companyLink}
@@ -29,18 +30,19 @@ const { company, companyLink, period, role, dur } = Astro.props;
     </a>
     <span
       class={cn(
-        "text-[10.5px] rounded-[6px] px-2 py-[3px] whitespace-nowrap shrink-0",
+        "text-[10.5px] rounded-[6px] px-2 py-1 whitespace-nowrap shrink-0",
         "text-ink-faint bg-surface border border-line",
         "ml-auto",
-        "max-[640px]:ml-0",
-        "max-[640px]:self-start",
+        "max-[640px]:ml-0 max-[640px]:self-start",
       )}
     >
       {period}
     </span>
   </div>
 
-  <div class="flex items-center gap-[8px] mb-[12px] flex-wrap max-[640px]:mb-[10px]">
+  <div
+    class="flex items-center gap-[8px] mb-[12px] flex-wrap max-[640px]:mb-[10px]"
+  >
     <span class="text-[13px] text-ink-soft italic max-[640px]:text-[12px]">
       {role}
     </span>
@@ -51,7 +53,9 @@ const { company, companyLink, period, role, dur } = Astro.props;
     </span>
   </div>
 
-  <p class="text-[13px] text-ink-soft italic leading-[1.55] mb-[12px] max-[640px]:text-[12px]">
+  <p
+    class="text-[13px] text-ink-soft italic leading-[1.55] mb-[12px] max-[640px]:text-[12px]"
+  >
     <slot name="description" />
   </p>
 

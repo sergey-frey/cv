@@ -1,0 +1,33 @@
+---
+import { cn } from "../shared/utils/cn";
+import { ArrowDownToLine } from "@lucide/astro";
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a
+  class={cn(
+    "border border-line rounded-md px-3 py-2",
+    "flex items-center gap-2.5",
+    "cursor-pointer transition-colors duration-120",
+    "text-surface bg-accent",
+    "hover:bg-ink",
+    "no-print",
+  )}
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  download="sergey-tenkaev-resume.pdf"
+  aria-label="Download PDF"
+  title="Download PDF"
+>
+  <ArrowDownToLine size={14} />
+
+  <span class="text-[13px] font-medium">
+    <slot />
+  </span>
+</a>

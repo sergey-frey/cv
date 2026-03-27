@@ -1,6 +1,10 @@
 {
   "meta": {
-    "title": "Тенькаев Сергей — Frontend Developer"
+    "title": "Тенькаев Сергей — Frontend Developer",
+    "pdfUrl": "/cv-ru.pdf"
+  },
+  "common": {
+    "downloadPdf": "Скачать PDF"
   },
   "profile": {
     "avatarText": "СТ",

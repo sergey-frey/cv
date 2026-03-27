@@ -8,6 +8,7 @@ import ExperienceCard from "../../components/ExperienceCard.astro";
 import Tag from "../../components/Tag.astro";
 import LanguageRow from "../../components/LanguageRow.astro";
 import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+import DownloadButton from "../../components/DownloadButton.astro";
 import { getContent, langs, type Lang } from "../../i18n";
 
 export function getStaticPaths() {
@@ -28,11 +29,13 @@ const content = getContent(lang);
     <div
       class="max-w-[780px] mx-auto pt-10 px-6 pb-16 max-[768px]:px-5 max-[640px]:pt-6 max-[640px]:pb-12 max-[480px]:px-4 max-[380px]:px-[14px]"
     >
-      <div class="flex justify-end mb-4">
+      <div class="flex items-center justify-end mb-4 gap-2.5">
         <LanguageSwitcher currentLang={lang} />
       </div>
 
-      <ProfileHeader profile={content.profile} />
+      <ProfileHeader profile={content.profile}>
+        <DownloadButton href={content.meta.pdfUrl}>{content.common.downloadPdf}</DownloadButton>
+      </ProfileHeader>
 
       <StatsGrid stats={content.stats} />
 
@@ -40,8 +43,7 @@ const content = getContent(lang);
         <div
           class="bg-accent-bg border border-accent-bd rounded-md p-[18px_20px] leading-[1.75] text-ink-mid [&_strong]:text-ink [&_strong]:font-semibold max-[640px]:p-4 max-[640px]:leading-[1.65] max-[480px]:text-[14px]"
           set:html={content.sections.about.textHtml}
-        >
-        </div>
+        />
       </Section>
 
       <Section title={content.sections.experience.title}>
@@ -52,7 +54,9 @@ const content = getContent(lang);
           role={content.experience.moniLabs.role}
           dur={content.experience.moniLabs.duration}
         >
-          <span slot="description">{content.experience.moniLabs.description}</span>
+          <span slot="description"
+            >{content.experience.moniLabs.description}</span
+          >
 
           {
             content.experience.moniLabs.achievements.map((a) => (
@@ -76,7 +80,8 @@ const content = getContent(lang);
           role={content.experience.getads.role}
           dur={content.experience.getads.duration}
         >
-          <span slot="description">{content.experience.getads.description}</span>
+          <span slot="description">{content.experience.getads.description}</span
+          >
 
           {
             content.experience.getads.achievements.map((a) => (
@@ -100,7 +105,9 @@ const content = getContent(lang);
           role={content.experience.dataArmor.role}
           dur={content.experience.dataArmor.duration}
         >
-          <span slot="description">{content.experience.dataArmor.description}</span>
+          <span slot="description"
+            >{content.experience.dataArmor.description}</span
+          >
 
           {
             content.experience.dataArmor.achievements.map((a) => (
@@ -122,13 +129,21 @@ const content = getContent(lang);
         <div
           class="bg-surface border border-line rounded-md p-[16px_18px] flex flex-wrap gap-[7px] max-[640px]:p-4 max-[640px]:gap-[6px]"
         >
-          {content.skillsTags.map((t) => <Tag text={t.text} highlight={t.highlight} />)}
+          {
+            content.skillsTags.map((t) => (
+              <Tag text={t.text} highlight={t.highlight} />
+            ))
+          }
         </div>
       </Section>
 
       <Section title={content.sections.languages.title}>
         <div class="flex flex-col gap-[8px]">
-          {content.languages.map((l) => <LanguageRow name={l.name} level={l.level} />)}
+          {
+            content.languages.map((l) => (
+              <LanguageRow name={l.name} level={l.level} />
+            ))
+          }
         </div>
       </Section>
     </div>

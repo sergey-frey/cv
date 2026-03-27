@@ -67,3 +67,10 @@
 @utility jb-mono {
     font-family: 'JetBrains Mono Variable', monospace;
 }
+
+@media print {
+    .no-print {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}

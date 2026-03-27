@@ -1,6 +1,10 @@
 {
   "meta": {
-    "title": "Sergey Tenkaev — Frontend Developer"
+    "title": "Sergey Tenkaev — Frontend Developer",
+    "pdfUrl": "/cv-en.pdf"
+  },
+  "common": {
+    "downloadPdf": "Download PDF"
   },
   "profile": {
     "avatarText": "ST",
