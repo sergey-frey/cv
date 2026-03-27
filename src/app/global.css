@@ -64,6 +64,8 @@
     }
 }
 
+@custom-variant hover (&:hover);
+
 @utility jb-mono {
     font-family: 'JetBrains Mono Variable', monospace;
 }
