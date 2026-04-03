@@ -10,6 +10,7 @@ const { href } = Astro.props;
 ---
 
 <a
+  data-id="download-cv-button"
   class={cn(
     "border border-line rounded-md px-3 py-2",
     "flex items-center gap-2.5",
@@ -39,3 +40,18 @@ const { href } = Astro.props;
     }
   }
 </style>
+
+<script>
+  import { fireEvent } from "../shared/utils/fireEvent";
+  import { EventType } from "../shared/types/stats";
+
+  const downloadCvButtons = document.querySelector<HTMLAnchorElement>(
+    "[data-id='download-cv-button']",
+  );
+
+  if (downloadCvButtons) {
+    downloadCvButtons.addEventListener("click", () => {
+      fireEvent(EventType.LOAD_RESUME);
+    });
+  }
+</script>

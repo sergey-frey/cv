@@ -1,14 +1,14 @@
 ---
 import "../../app/global.css";
-import ProfileHeader from "../../components/ProfileHeader.astro";
-import StatsGrid from "../../components/StatsGrid.astro";
-import Section from "../../components/Section.astro";
 import AchievementItem from "../../components/AchievementItem.astro";
+import DownloadButton from "../../components/DownloadButton.astro";
 import ExperienceCard from "../../components/ExperienceCard.astro";
-import Tag from "../../components/Tag.astro";
 import LanguageRow from "../../components/LanguageRow.astro";
 import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
-import DownloadButton from "../../components/DownloadButton.astro";
+import ProfileHeader from "../../components/ProfileHeader.astro";
+import Section from "../../components/Section.astro";
+import StatsGrid from "../../components/StatsGrid.astro";
+import Tag from "../../components/Tag.astro";
 import { getContent, langs, type Lang } from "../../i18n";
 
 export function getStaticPaths() {
@@ -74,9 +74,9 @@ const pdfUrl = base + content.meta.pdfUrl;
           role={content.experience.moniLabs.role}
           dur={content.experience.moniLabs.duration}
         >
-          <span slot="description"
-            >{content.experience.moniLabs.description}</span
-          >
+          <span slot="description">
+            {content.experience.moniLabs.description}
+          </span>
 
           {
             content.experience.moniLabs.achievements.map((a) => (
@@ -125,9 +125,9 @@ const pdfUrl = base + content.meta.pdfUrl;
           role={content.experience.dataArmor.role}
           dur={content.experience.dataArmor.duration}
         >
-          <span slot="description"
-            >{content.experience.dataArmor.description}</span
-          >
+          <span slot="description">
+            {content.experience.dataArmor.description}
+          </span>
 
           {
             content.experience.dataArmor.achievements.map((a) => (
@@ -167,5 +167,14 @@ const pdfUrl = base + content.meta.pdfUrl;
         </div>
       </Section>
     </div>
+
+    <script>
+      import { fireEvent } from "../../shared/utils/fireEvent";
+      import { EventType } from "../../shared/types/stats";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        fireEvent(EventType.IMPRESSION);
+      });
+    </script>
   </body>
 </html>

@@ -16,6 +16,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       return (
         <a
           href={`${base}/${lang}/`}
+          data-id="language-switcher"
+          data-lang={lang}
           class:list={[
             "text-[11px] font-bold tracking-[1px] uppercase px-[9px] py-[4px] rounded-sm border transition-colors duration-[0.12s]",
             isActive
@@ -30,3 +32,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     })
   }
 </div>
+
+<script>
+  import { fireEvent } from "../shared/utils/fireEvent";
+  import { EventType } from "../shared/types/stats";
+
+  const LANG_TO_EVENT_MAP = {
+    ru: EventType.SWITCH_LANGUAGE_RU,
+    en: EventType.SWITCH_LANGUAGE_EN,
+  };
+
+  const languageSwitchers = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>(
+      "[data-id='language-switcher']",
+    ),
+  );
+
+  for (const languageSwitcher of languageSwitchers) {
+    languageSwitcher.addEventListener("click", () => {
+      const switcherLang = languageSwitcher.dataset
+        .lang as keyof typeof LANG_TO_EVENT_MAP;
+
+      fireEvent(LANG_TO_EVENT_MAP[switcherLang]);
+    });
+  }
+</script>
