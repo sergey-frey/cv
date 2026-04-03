@@ -1,6 +1,7 @@
 ---
 import { Mail, Send } from "@lucide/astro";
 import type { Content } from "../i18n";
+import { cn } from "../shared/utils/cn";
 
 interface Props {
   profile: Content["profile"];
@@ -33,7 +34,14 @@ const {
     </h1>
 
     <span
-      class="inline-flex items-center gap-[6px] bg-green-bg text-green text-[12px] font-semibold px-[12px] py-[5px] rounded-full whitespace-nowrap relative before:content-[''] before:w-[7px] before:h-[7px] before:bg-green before:rounded-full before:animate-[blink_2s_infinite] before:inline-block before:shrink-0 max-[640px]:text-[11px] max-[640px]:px-[10px] max-[640px]:py-[4px]"
+      class={cn(
+        "inline-flex items-center gap-[6px]",
+        "bg-green-bg text-green",
+        "text-[12px] font-semibold px-[12px] py-[5px] rounded-full whitespace-nowrap relative",
+        "before:content-[''] before:w-[7px] before:h-[7px] before:bg-green before:rounded-full",
+        "before:animate-[blink_2s_infinite] before:inline-block before:shrink-0",
+        "max-[640px]:text-[11px] max-[640px]:px-2.5 max-[640px]:py-1",
+      )}
     >
       {badgeText}
     </span>
