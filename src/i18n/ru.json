@@ -16,7 +16,6 @@
     "contacts": {
       "email": "sergey.frey.work@gmail.com",
       "telegram": "@sergeyfrey",
-      "location": "Алматы · Удалённо",
       "emailAriaLabel": "Email",
       "telegramAriaLabel": "Telegram"
     }
@@ -24,7 +23,7 @@
   "stats": [
     { "value": "4+", "label": "Лет опыта" },
     { "value": "3", "label": "Компании" },
-    { "value": "Web3", "label": "Домен" }
+    { "value": "Web3", "label": "Последний домен" }
   ],
   "sections": {
     "about": {
@@ -43,10 +42,10 @@
   },
   "experience": {
     "moniLabs": {
-      "period": "Июнь 2025 — н.в.",
+      "period": "Июнь 2025 — Апрель 2026",
       "role": "Frontend-разработчик",
       "duration": "10 мес.",
-      "description": "Web3 AI-экосистема для трейдинга и анализа крипторынка. Алматы.",
+      "description": "Web3 AI-экосистема для трейдинга и анализа крипторынка.",
       "achievements": [
         "Разработал торговый терминал с нуля в команде из двух разработчиков",
         "Внедрил AI-assisted workflow: агентные инструменты для рефакторинга и первичного code review",
@@ -62,6 +61,8 @@
         { "text": "Radix UI", "highlight": false },
         { "text": "shadcn", "highlight": false },
         { "text": "Vite", "highlight": false },
+        { "text": "Vitest", "highlight": false },
+        { "text": "Playwright", "highlight": false },
         { "text": "Webpack", "highlight": false },
         { "text": "Claude Code", "highlight": false },
         { "text": "Codex", "highlight": false },
@@ -72,7 +73,7 @@
       "period": "Нояб. 2023 — Май 2025",
       "role": "Frontend Developer",
       "duration": "1 г. 7 мес.",
-      "description": "AdTech-компания, рекламные решения для web, mobile и Smart TV. Москва.",
+      "description": "AdTech-компания, рекламные решения для web, mobile и Smart TV.",
       "achievements": [
         "Автоматизировал генерацию продукта: <strong>4 ч. разработчика / день → 20 мин. менеджера</strong>",
         "Модуль статистики: потери данных снижены в <strong>4 раза</strong>",
@@ -88,14 +89,15 @@
         { "text": "Zustand", "highlight": false },
         { "text": "MUI", "highlight": false },
         { "text": "Tailwind", "highlight": false },
-        { "text": "SCSS", "highlight": false }
+        { "text": "SCSS", "highlight": false },
+        { "text": "Jest", "highlight": false }
       ]
     },
     "dataArmor": {
       "period": "Окт. 2021 — Сент. 2023",
       "role": "Frontend Developer",
       "duration": "2 года",
-      "description": "Аутсорс-компания, разработка ПО на заказ и ИТ-консалтинг. Казань.",
+      "description": "Аутсорс-компания, разработка ПО на заказ и ИТ-консалтинг.",
       "achievements": [
         "CRM для управления клиентским потоком: пропускная способность выросла на <strong>20%</strong>",
         "Обнаружил и устранил несколько XSS-уязвимостей на корпоративном портале",
@@ -120,6 +122,8 @@
     { "text": "React", "highlight": true },
     { "text": "Next.js", "highlight": true },
     { "text": "Redux", "highlight": false },
+    { "text": "Redux Toolkit", "highlight": false },
+    { "text": "Tanstack Query", "highlight": false },
     { "text": "MobX", "highlight": false },
     { "text": "Zustand", "highlight": false },
     { "text": "HTML5", "highlight": false },
@@ -137,7 +141,11 @@
     { "text": "SPA", "highlight": false },
     { "text": "ООП", "highlight": false },
     { "text": "ES6+", "highlight": false },
-    { "text": "Адаптивная вёрстка", "highlight": false }
+    { "text": "Адаптивная вёрстка", "highlight": false },
+    { "text": "Claude Code", "highlight": false },
+    { "text": "Codex", "highlight": false },
+    { "text": "Cursor", "highlight": false },
+    { "text": "CSS-in-JS", "highlight": false }
   ],
   "languages": [
     { "name": "Русский", "level": "Родной" },

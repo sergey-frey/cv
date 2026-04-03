@@ -16,7 +16,6 @@
     "contacts": {
       "email": "sergey.frey.work@gmail.com",
       "telegram": "@sergeyfrey",
-      "location": "Almaty · Remote",
       "emailAriaLabel": "Email",
       "telegramAriaLabel": "Telegram"
     }
@@ -24,7 +23,7 @@
   "stats": [
     { "value": "4+", "label": "Years of exp." },
     { "value": "3", "label": "Companies" },
-    { "value": "Web3", "label": "Domain" }
+    { "value": "Web3", "label": "Last Domain" }
   ],
   "sections": {
     "about": {
@@ -43,10 +42,10 @@
   },
   "experience": {
     "moniLabs": {
-      "period": "June 2025 — present",
+      "period": "June 2025 — April 2026",
       "role": "Frontend Developer",
       "duration": "10 mo.",
-      "description": "Web3 AI ecosystem for crypto trading and market analysis. Almaty.",
+      "description": "Web3 AI ecosystem for crypto trading and market analysis.",
       "achievements": [
         "Built a trading terminal from scratch as part of a two-developer team",
         "Implemented AI-assisted workflow: agentic tools for refactoring and initial code review",
@@ -62,6 +61,8 @@
         { "text": "Radix UI", "highlight": false },
         { "text": "shadcn", "highlight": false },
         { "text": "Vite", "highlight": false },
+        { "text": "Vitest", "highlight": false },
+        { "text": "Playwright", "highlight": false },
         { "text": "Webpack", "highlight": false },
         { "text": "Claude Code", "highlight": false },
         { "text": "Codex", "highlight": false },
@@ -72,7 +73,7 @@
       "period": "Nov. 2023 — May 2025",
       "role": "Frontend Developer",
       "duration": "1 yr. 7 mo.",
-      "description": "AdTech company, advertising solutions for web, mobile, and Smart TV. Moscow.",
+      "description": "AdTech company, advertising solutions for web, mobile, and Smart TV.",
       "achievements": [
         "Automated product generation: <strong>4 hrs dev/day → 20 min manager</strong>",
         "Statistics module: data loss reduced by <strong>4×</strong>",
@@ -88,14 +89,15 @@
         { "text": "Zustand", "highlight": false },
         { "text": "MUI", "highlight": false },
         { "text": "Tailwind", "highlight": false },
-        { "text": "SCSS", "highlight": false }
+        { "text": "SCSS", "highlight": false },
+        { "text": "Jest", "highlight": false }
       ]
     },
     "dataArmor": {
       "period": "Oct. 2021 — Sep. 2023",
       "role": "Frontend Developer",
       "duration": "2 years",
-      "description": "Outsourcing company, custom software development and IT consulting. Kazan.",
+      "description": "Outsourcing company, custom software development and IT consulting.",
       "achievements": [
         "CRM for client flow management: throughput increased by <strong>20%</strong>",
         "Discovered and fixed several XSS vulnerabilities on the corporate portal",
@@ -120,6 +122,8 @@
     { "text": "React", "highlight": true },
     { "text": "Next.js", "highlight": true },
     { "text": "Redux", "highlight": false },
+    { "text": "Redux Toolkit", "highlight": false },
+    { "text": "Tanstack Query", "highlight": false },
     { "text": "MobX", "highlight": false },
     { "text": "Zustand", "highlight": false },
     { "text": "HTML5", "highlight": false },
@@ -137,7 +141,11 @@
     { "text": "SPA", "highlight": false },
     { "text": "OOP", "highlight": false },
     { "text": "ES6+", "highlight": false },
-    { "text": "Responsive Design", "highlight": false }
+    { "text": "Responsive Design", "highlight": false },
+    { "text": "Claude Code", "highlight": false },
+    { "text": "Codex", "highlight": false },
+    { "text": "Cursor", "highlight": false },
+    { "text": "CSS-in-JS", "highlight": false }
   ],
   "languages": [
     { "name": "Russian", "level": "Native" },
